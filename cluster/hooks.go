@@ -692,6 +692,7 @@ func RegisterDomainPostHook(input interface{}) error {
 		},
 		"domainFilters": []string{domain},
 		"policy":        "sync",
+		"txtOwnerId":    commonCluster.GetUID(),
 	}
 
 	externalDnsValuesJson, err := json.Marshal(externalDnsValues)
